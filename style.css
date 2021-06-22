@@ -10,9 +10,7 @@
     padding: 15px;
     background: -webkit-linear-gradient(black,teal);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    /* box-shadow: 10px 10px 5px grey; */
-      
+    -webkit-text-fill-color: transparent;      
 }
 body{
     background-image: linear-gradient(to top right,teal, whitesmoke);
@@ -78,13 +76,19 @@ body{
     background-color: transparent;
     box-shadow: none;
 }
+#overlay{
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    padding-top: 200px;
+}
 #todo{
     margin:auto;
     border-radius: 10px;
-    width: 50%;
-    display: block;
-    background-color: lavenderblush;
-    position: fixed;    
+    width: 45%;
+    display: none;
+    background-color: lavenderblush;    
 }
 .heading{
     font-size: 30px;
@@ -96,32 +100,13 @@ body{
     background-color: red;
     color: white;
 }
-/* .btns{
-    background-color: #9361bf;
-    padding: 30px;
-}
-.save{
-    float: right;
-    padding: 4px;
-    border-radius: 4px;
-    
-    color: black;
-  
-}
-.cancel{
-    float: left;
-    padding: 4px;
-    border-radius: 4px;
-    
-    color: black;
-} */
 #add, .delete{
     float: right;
     background: #9361bf;
     padding: 8px;
     border-radius: 4px;
-    
     color: white;
+    cursor : pointer;
 }
 #addtask{
     margin-left: 8px;
