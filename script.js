@@ -120,6 +120,7 @@ addTask.addEventListener('submit',function(e){
 
     taskName.classList.add('name');
     del.classList.add('delete');
+    del.onclick=remove;
     
 
     li.appendChild(taskName);
@@ -128,17 +129,12 @@ addTask.addEventListener('submit',function(e){
 });
 
 //removing tasks from to-do list
-var btns=document.querySelectorAll('.delete');
-Array.from(btns).forEach(function(btn){
-    btn.addEventListener('click',function(e){
-        const li= e.target.parentElement;
+function remove(){
+    addEventListener('click',function(e){
+        if(e.target.className==='delete'){
+            const li= e.target.parentElement;
 
         li.parentNode.removeChild(li);
-        console.log('doing');
+        }
     });
-});
-
-window.localStorage;
-localStorage.setItem("key","value");
-var task=localStorage.getItem("key");
-var taskName=localStorage.getItem("value");
+}
