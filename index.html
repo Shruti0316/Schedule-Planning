@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>Calender</title>
+        <meta charset="utf-8">
         <link rel='stylesheet' href='style.css'>
     </head>
     <body>
@@ -10,28 +11,34 @@
             <span id='clock'></span>
         </div>
         <!--TO-DO LIST-->
-        <div id='todo'>
-            <span class="heading">&emsp; Tasks to do</span>
-            <span><button id="shut" onclick="shut()">X</button></span>
-            <div id=tasks>
-                <form id="addtask">
-                    <input type="text" placeholder="Add Event..." />
-                    <button id='add'>Add</button>
-                </form>
-                <ul id="list">
-                    <li>
-                        <span class="name">baking class</span>
-                        <span class="delete">Delete</span>
+        <div id='overlay'>
+            <div id='todo'>
+                <span class="heading">&emsp; Tasks to do</span>
+                <span><button id="shut" onclick="shut()">X</button></span>
+                <div id=tasks>
+                    <form id="addtask">
+                        <input type="date" placeholder="dd/mm/yyyy" class="addDate">&emsp;
+                        <input type="text" placeholder="Add Event..." />
+                        <button id='add'>Add</button>
+                    </form>
+                    <ul id="list">
+                        <li>
+                            <span class="tdate">16-06-2021</span>
+                            &emsp;
+                            <span class="name">Music Concert</span>
+                            <span class="delete" onclick="remove()">Delete</span>
+                            <span class="complete" onclick="done()">Done</span>
                         </li>
-                </ul>
-            </div>
+                    </ul>
+                </div>
         </div>
         <div id="calender">
             
                 <div id='mname'>JUNE 2021</div>
                 <div id='btn'>
-                <button id='previous' onclick="previous()">&lt;</button>
-                <button id='next' onclick="next()">&gt;</button>
+                    <button id='previous' onclick="previous()">&lt;</button>
+                    <button id='td' onclick="todo()">Add Task</button>
+                    <button id='next' onclick="next()">&gt;</button>
                 </div>
             <!--DAYS OF WEEK-->
             <div class="days">
