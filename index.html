@@ -17,13 +17,17 @@
                 <span><button id="shut" onclick="shut()">X</button></span>
                 <div id=tasks>
                     <form id="addtask">
+                        <input type="date" placeholder="dd/mm/yyyy" class="addDate">&emsp;
                         <input type="text" placeholder="Add Event..." />
                         <span><button id='add'>Add</button></span>
                     </form>
                     <ul id="list">
                         <li>
-                            <span class="name">baking class</span>
+                            <span class="tdate">16-06-2021</span>
+                            &emsp;
+                            <span class="name">Music Concert</span>
                             <span class="delete" onclick="remove()">Delete</span>
+                            <span class="complete" onclick="done()">Done</span>
                         </li>
                     </ul>
                 </div>
@@ -33,8 +37,9 @@
             
                 <div id='mname'>JUNE 2021</div>
                 <div id='btn'>
-                <button id='previous' onclick="previous()">&lt;</button>
-                <button id='next' onclick="next()">&gt;</button>
+                    <button id='previous' onclick="previous()">&lt;</button>
+                    <button id='td' onclick="todo()">Add Task</button>
+                    <button id='next' onclick="next()">&gt;</button>
                 </div>
             <!--DAYS OF WEEK-->
             <div class="days">
